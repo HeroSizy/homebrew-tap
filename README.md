@@ -2,7 +2,7 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-Homebrew casks of [MyTwig](https://github.com/HeroSizy/mytwig-releases), a native Git client for macOS, Windows and Linux.
+This tap contains the Homebrew casks of [MyTwig](https://github.com/HeroSizy/mytwig-releases), a native Git client for macOS, Windows and Linux.
 
 ## Install
 
@@ -10,14 +10,24 @@ Homebrew casks of [MyTwig](https://github.com/HeroSizy/mytwig-releases), a nativ
 brew install --cask herosizy/tap/mytwig
 ```
 
-This is the same as `brew tap herosizy/tap` followed by `brew install --cask mytwig`. It needs macOS 12 Monterey or later, on Apple silicon or Intel (Homebrew picks the right build).
+This command does the same as `brew tap herosizy/tap` and then `brew install --cask mytwig`. You must have macOS 12 Monterey or later, on Apple silicon or Intel. Homebrew selects the correct build.
 
-**First launch.** MyTwig is not signed with an Apple Developer ID and not notarized by Apple yet. Homebrew marks the download as quarantined, as a browser does, so macOS blocks the first launch:
+**First launch.** MyTwig does not have an Apple Developer ID signature yet, and Apple did not notarize it yet. Homebrew puts a quarantine flag on the download, as a browser does. Thus, macOS blocks the first launch. To open MyTwig, do the procedure for your macOS version.
 
-- macOS 15 Sequoia and later: open MyTwig, click **Done**, then go to **System Settings → Privacy & Security** and click **Open Anyway**.
-- macOS 12–14: Control-click MyTwig in Applications, choose **Open**, then click **Open**.
+**macOS 15 Sequoia and later**
 
-You may need to do this again after `brew upgrade`, which installs a new copy. The [install script](https://github.com/HeroSizy/mytwig-releases#install-with-one-command) avoids the prompt altogether.
+1. Open MyTwig.
+2. Click **Done**.
+3. Go to **System Settings → Privacy & Security**.
+4. Click **Open Anyway**.
+
+**macOS 12–14**
+
+1. In **Applications**, Control-click MyTwig.
+2. Select **Open**.
+3. Click **Open**.
+
+> **NOTE:** `brew upgrade` installs a new copy of MyTwig. Thus, you possibly must do the procedure again after an upgrade. The [install script](https://github.com/HeroSizy/mytwig-releases#install-with-one-command) does not cause this prompt.
 
 ## Update
 
@@ -25,7 +35,7 @@ You may need to do this again after `brew upgrade`, which installs a new copy. T
 brew upgrade --cask mytwig
 ```
 
-MyTwig also updates itself from its signed releases (**Settings → General → Updates**). The cask is marked `auto_updates`, so a plain `brew upgrade` leaves it to the app, and `brew list --versions` keeps showing the version Homebrew installed until you run the command above.
+MyTwig also updates itself from its signed releases (**Settings → General → Updates**). The cask has the `auto_updates` flag. Thus, a plain `brew upgrade` lets the app do the update. `brew list --versions` shows the version that Homebrew installed until you run the command above.
 
 ## Uninstall
 
@@ -34,8 +44,10 @@ brew uninstall --cask mytwig          # keeps your settings
 brew uninstall --cask --zap mytwig    # also removes settings, caches and logs
 ```
 
-`--zap` removes `~/Library/Application Support/MyTwig`, `~/Library/Caches/MyTwig` and `~/Library/Logs/MyTwig`. Tokens MyTwig saved in the Keychain stay; sign out in **Settings → Accounts** first, or remove them in Keychain Access.
+`--zap` removes `~/Library/Application Support/MyTwig`, `~/Library/Caches/MyTwig` and `~/Library/Logs/MyTwig`.
+
+> **NOTE:** `--zap` does not remove the tokens that MyTwig keeps in the Keychain. To remove them, click **Sign Out** in **Settings → Accounts** before you uninstall. You can also remove them in Keychain Access.
 
 ## Problems
 
-Report problems with MyTwig, or with this cask, in [MyTwig's issues](https://github.com/HeroSizy/mytwig-releases/issues). The cask in this repository is updated automatically after each release.
+Report problems with MyTwig, or with this cask, in [MyTwig's issues](https://github.com/HeroSizy/mytwig-releases/issues). After each release, an automatic process updates the cask in this repository.
