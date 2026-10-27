@@ -1,11 +1,11 @@
 cask "mytwig" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.4.0"
-  sha256 arm:   "04adeecab227deab563942e44ff0e9217eb26b9037040f4c259fcf92a5920a3a",
-         intel: "0043c1d9d59d587cd0e61047d180078f70dac3e11f0cd6589af86b23668f684e"
+  version "0.5.0"
+  sha256 arm:   "9f183050f0198255f512aa921c8c2ea9616638f120e89b22c6c4e9d5d29c184f",
+         intel: "d89aa23b34a62b8a3f6609305b8570dea99b88da46476e7e116a51a05494b23b"
 
-  url "https://github.com/HeroSizy/mytwig-releases/releases/download/v#{version}/MyTwig.#{version}.#{arch}.dmg"
+  url "https://github.com/HeroSizy/mytwig-releases/releases/download/v#{version}/mytwig-#{version}-#{arch}.dmg"
   name "MyTwig"
   desc "Native Git client with a commit graph"
   homepage "https://github.com/HeroSizy/mytwig-releases"
