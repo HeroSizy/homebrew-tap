@@ -12,22 +12,7 @@ brew install --cask herosizy/tap/mytwig
 
 This command does the same as `brew tap herosizy/tap` and then `brew install --cask mytwig`. You must have macOS 12 Monterey or later, on Apple silicon or Intel. Homebrew selects the correct build.
 
-**First launch.** MyTwig does not have an Apple Developer ID signature yet, and Apple did not notarize it yet. Homebrew puts a quarantine flag on the download, as a browser does. Thus, macOS blocks the first launch. To open MyTwig, do the procedure for your macOS version.
-
-**macOS 15 Sequoia and later**
-
-1. Open MyTwig.
-2. Click **Done**.
-3. Go to **System Settings → Privacy & Security**.
-4. Click **Open Anyway**.
-
-**macOS 12–14**
-
-1. In **Applications**, Control-click MyTwig.
-2. Select **Open**.
-3. Click **Open**.
-
-> **NOTE:** `brew upgrade` installs a new copy of MyTwig. Thus, you possibly must do the procedure again after an upgrade. The [install script](https://github.com/HeroSizy/mytwig-releases#install-with-one-command) does not cause this prompt.
+**First launch.** MyTwig has an Apple Developer ID signature and Apple notarized it, so macOS opens it at once.
 
 ## Update
 
