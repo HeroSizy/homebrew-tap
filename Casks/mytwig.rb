@@ -1,9 +1,9 @@
 cask "mytwig" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.7.0"
-  sha256 arm:   "4414528eae578289feecbbe13700a0d9d9f4936f121d73ebced7cbe85112cc7f",
-         intel: "101e2892f876942b22abbd157e86aed05ae0010a338bdc5b57d7d9f85d2343eb"
+  version "0.8.0"
+  sha256 arm:   "954f549daab7136308e5c5b8ff72ca07d2fc5c6a944afc399996f59f2980472e",
+         intel: "9afd98d26bbf5a29a70b155cabdfc816f580b3824e8a67bed34a2e53d5735f87"
 
   url "https://github.com/HeroSizy/mytwig-releases/releases/download/v#{version}/mytwig-#{version}-#{arch}.dmg"
   name "MyTwig"
